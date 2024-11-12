@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import QueryProvider from "@/components/provider/QueryProvider";
 import "./globals.css";
 
@@ -25,12 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <main className="max-w-[600px] mx-auto h-dvh shadow-lg">
+            {children}
+          </main>
+        </QueryProvider>
       </body>
+      <GoogleAnalytics gaId="G-BXMPGJ5BMX" />
     </html>
   );
 }
