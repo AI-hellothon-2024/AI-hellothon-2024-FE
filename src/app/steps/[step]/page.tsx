@@ -1,9 +1,9 @@
 import React from "react";
-
+import { GAME_STEPS } from "@/lib/constants";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [1, 2, 3, 4, 5].map((step) => ({ step: `${step}` }));
+  return Object.keys(GAME_STEPS).map((step) => ({ step }));
 }
 
 const Page = ({ params }: { params: { step: string } }) => {
