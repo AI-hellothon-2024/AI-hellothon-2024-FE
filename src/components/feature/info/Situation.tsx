@@ -24,7 +24,7 @@ const Situation = ({ context }: Props) => {
       ...data,
       ...context,
     });
-    router.push("/steps/0");
+    router.push("/game");
   };
   return (
     <form
