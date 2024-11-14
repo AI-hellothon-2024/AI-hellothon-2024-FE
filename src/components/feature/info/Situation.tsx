@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import type { InfoForm, InfoFormStep } from "@/app/info/page";
+import type { InfoForm, InfoFormStep } from "./Form";
 import { useForm, Controller } from "react-hook-form";
 import { SITUATIONS } from "@/lib/constants";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -24,7 +24,7 @@ const Situation = ({ context }: Props) => {
       ...data,
       ...context,
     });
-    router.push("/steps/1");
+    router.push("/steps/0");
   };
   return (
     <form

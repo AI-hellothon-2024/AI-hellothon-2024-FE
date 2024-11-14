@@ -1,7 +1,7 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import type { InfoForm } from "@/app/info/page";
+import type { InfoForm } from "./Form";
 import { useForm } from "react-hook-form";
 
 interface Props {
