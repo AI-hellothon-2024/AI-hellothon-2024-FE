@@ -4,15 +4,11 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import QueryProvider from "@/components/provider/QueryProvider";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const pretendard = localFont({
+  src: "./fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="ko" className={`${pretendard.variable}`}>
+      <body className={`${pretendard.className} antialiased`}>
         <QueryProvider>
-          <main className="max-w-[600px] mx-auto h-dvh shadow-lg">
+          <main className="max-w-[600px] mx-auto h-dvh shadow-lg px-9 pb-3">
             {children}
           </main>
         </QueryProvider>
